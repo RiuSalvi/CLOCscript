@@ -1,5 +1,9 @@
 # CLOCscript
-Scan a specified GitHub source repository with CLOC and send the output of CLOC to an email address specified.
+Scan a specified GitHub source repository with CLOC and send the output of CLOC to an email address specified. Supports Windows, Linux and MacOS.
+
+## Requirements
+
+Python 3
 
 ## Config
 
