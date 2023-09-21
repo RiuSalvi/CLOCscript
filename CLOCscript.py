@@ -1,6 +1,13 @@
-import os, subprocess
+import os, subprocess, argparse
 
-target = "https://github.com/AlDanial/cloc.git"
+parser = argparse.ArgumentParser(description='Scan a specified GitHub source repository with CLOC and send the output of CLOC to an email address specified')
+
+parser.add_argument('target', metavar='target', type=str, help='The target GitHub source repository to scan.')
+
+args = parser.parse_args()
+
+# target = "https://github.com/AlDanial/cloc.git"
+target = args.target
 
 subprocess.check_call(["git", "clone", target])
 
